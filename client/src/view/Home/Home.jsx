@@ -89,7 +89,7 @@ const Home = () => {
     password: ""
   });
     if(isAuthenticated){
-      const db = async () => await axios.put(`http://localhost:3001/user/${user.email}`, ...data)
+      const db = async () => await axios.put(`/user/${user.email}`, ...data)
       const result = db()
       console.log(result);
     }

@@ -74,7 +74,7 @@ const UpdateData = () => {
 console.log(estadoEmail.email);
   const submitHandler =  async (event) => {
     event.preventDefault();
-    await axios.put(`http://localhost:3001/user/${email}`, {...data, image: uploadedImageUrl});
+    await axios.put(`/user/${email}`, {...data, image: uploadedImageUrl});
     setData({
       name: "",
       surname: "",
