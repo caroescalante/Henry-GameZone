@@ -10,7 +10,7 @@ import axios from "axios";
 
 //para que todas las peticiones empiecen y terminen en una misma base url
 // axios.defaults.baseURL="http://localhost:3001" //descomentar si se quier trabajar de manera local
-axios.defaults.baseURL="henry-gamezone-production.up.railway.app" //conexión del front al back
+axios.defaults.baseURL="https://henry-gamezone-production.up.railway.app/" //conexión del front al back
 
 const domain = import.meta.env.VITE_AUTH0_DOMAIN;
 const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
