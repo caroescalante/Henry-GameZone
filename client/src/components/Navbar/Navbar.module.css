@@ -1,0 +1,29 @@
+.navbarContainer {
+    display: flex;    
+    justify-content: space-around;    
+    background-color: black;
+    font-family: 'calibri';
+    padding-bottom: 15px; 
+    align-items: center;
+}
+
+.links ion-icon {
+    color:aqua;
+    padding: 10px 10px;
+}
+
+.links ion-icon:hover {   
+    color: aqua;
+    box-shadow: 1px 1px 20px 8px aqua;
+    border-radius: 50px;
+    transform: translateY(5px);
+    padding: 10px 10px;    
+}
+
+.name{
+    color: aqua;
+}
+
+
+
+
