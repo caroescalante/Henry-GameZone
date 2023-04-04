@@ -8,49 +8,46 @@ module.exports = (sequelize) => {
       type: DataTypes. UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
-      allowNull: false,
     },
 
     name: {
       type: DataTypes.STRING, 
-      defaultValue: 'empty',     
+      defaultValue: "",     
     },
     
     surname: {
       type: DataTypes.STRING,
-      defaultValue: "empty",
+      defaultValue: "",
       
     },
 
     phone: {
       type: DataTypes.STRING,
-      defaultValue: 'empty',
-    },
-
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      defaultValue: "",
     },
 
     rol: {
-      type: DataTypes.ENUM('admin', 'client'),
-      defaultValue: 'client',
+      type: DataTypes.ENUM('Admin', 'Client'),
+      defaultValue: 'Client',
     },
 
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      defaultValue: 'empty'
+     validate: {
+      isEmail: true,
+     } 
     },
 
     active: {
       type:DataTypes.BOOLEAN,
       defaultValue: true,
+      allowNull: false
     },
     image:{
       type: DataTypes.STRING,
-      defaultValue: "vacio",
+      defaultValue: "",
     }
   },
   { timestamps: false }
